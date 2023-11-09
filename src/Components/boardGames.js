@@ -1,0 +1,21 @@
+const boardGames = [
+  "Monopoly",
+  "Catan",
+  "Scrabble",
+  "Chess",
+  "Risk",
+  "Ticket",
+  "Carcassonne",
+  "Pandemic",
+  "Codenames",
+  "Connect 4",
+  " 7 Wonders",
+  "Azul",
+  "Pandemic",
+  "Terraforming Mars",
+  "Power Grid",
+  "Ticket to Ride: Europe",
+  "Small World",
+  "Terra Mystica",
+];
+export default boardGames;
