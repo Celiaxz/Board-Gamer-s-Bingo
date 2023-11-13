@@ -10,7 +10,7 @@ const Startscreen = () => {
 
   const onStartClick = () => {
     setIsGameStarted(true);
-    // document.getElementById("gameAudio").play();
+    document.getElementById("gameAudio").play();
   };
 
   return (
