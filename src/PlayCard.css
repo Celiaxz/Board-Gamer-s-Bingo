@@ -1,0 +1,140 @@
+/* @import url("https://fonts.googleapis.com/css?family=Dancing+Script|Josefin+Sans:600"); */
+
+.playCard {
+  padding-bottom: 5%;
+}
+
+.box {
+  color: black;
+  display: flex;
+  /* background-color: white; */
+  width: 400px;
+  height: 200px;
+
+  flex-direction: column;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.5);
+  font-size: 1.3rem;
+}
+
+.text {
+  padding: 10% 10% 0 10%;
+  flex: 1;
+}
+
+.text:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+  display: inline;
+}
+
+.quote {
+  margin: unset;
+}
+
+.nextButton {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #802bbc;
+  color: white;
+  transition: 0.2s ease-out;
+  padding: 0.5rem 0;
+  border-radius: 0 0 5px;
+}
+
+.nextButton:hover {
+  background: #741caf;
+  cursor: pointer;
+}
+
+.nextButton span {
+  align-self: center;
+}
+
+/* .fas {
+  font-size: 3.5rem;
+  color: rgba(100, 58, 122, 0.2);
+} */
+
+/* @import url("https://fonts.googleapis.com/css?family=Dancing+Script|Josefin+Sans:600");
+
+:root {
+  --main-color: #643a7a;
+  --secondary-color: #741caf;
+  --sans: "josefin sans", sans serif;
+}
+
+.box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 70%;
+  height: 60%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.5);
+  font-size: 1.3rem;
+}
+
+.quote {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+}
+
+.fas {
+  font-size: 3.5rem;
+  position: absolute;
+  top: 12%;
+  left: 7%;
+  color: rgba(100, 58, 122, 0.2);
+}
+
+input {
+  width: 100%;
+  transition: 0.3s;
+}
+
+.button p {
+  background: #802bbc;
+  text-align: center;
+  color: #fff;
+  padding: 1rem 0;
+  width: 100%;
+  font-family: var(--sans);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  transition: 0.2s ease-out;
+}
+
+.button p:hover {
+  background: var(--secondary-color);
+  cursor: pointer;
+} */
+
+@media screen and (max-width: 700px) {
+  .box {
+    font-size: 0.7rem;
+    width: 200px;
+    height: 100px;
+  }
+}
+
+/* @media screen and (min-width: 1000px) {
+  .box {
+    width: 200px;
+    height: 150px;
+  }
+} */
