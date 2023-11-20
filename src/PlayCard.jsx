@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import "./PlayCard.css";
 
 export function Card(props) {
+  // use to tell framer-motion to animate the component when the component re-renders
   const [id, setID] = useState(crypto.randomUUID());
   const card = props.card;
   const playNextCard = props.playNextCard;

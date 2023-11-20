@@ -194,4 +194,6 @@ export const matchedPartternsData = [
   [4, 9, 14, 19, 24],
 
   [0, 6, 12, 18, 24], //diagonal
+  [4, 8, 12, 16, 20],
+  //add the second diagonal
 ];

@@ -13,6 +13,14 @@ export function Cell(props) {
   const isMatched = cell.isMatched;
 
   const freeCellStyle = cell.name === "Movie Bingo" ? "movieBingo" : "";
+
+  // const newPatternMatchedStyle = newPatternWasMatched ? "animate" : "";
+  // const style = isMatched
+  //   ? `cell matchedPattern ${newPatternMatchedStyle} ${freeCellStyle}`
+  //   : isClicked
+  //   ? `cell strickeout ${newPatternMatchedStyle} ${freeCellStyle}`
+  //   : `cell unTouched ${newPatternMatchedStyle}`;
+
   const style = isMatched
     ? `cell matchedPattern ${
         newPatternWasMatched ? "animate" : ""

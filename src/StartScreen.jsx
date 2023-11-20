@@ -5,6 +5,7 @@ import "./StartScreen.css";
 import gameAudio from "./assets/sound.mp3";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
+
 const Startscreen = () => {
   const [isGameStarted, setIsGameStarted] = useState(false);
 

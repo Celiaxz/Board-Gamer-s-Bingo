@@ -14,6 +14,7 @@ export function Bingo() {
   const [partternsData, setPartterns] = useState(matchedPartternsData);
   const [randomData, setRandomData] = useState(firstRandomCard);
   const [boardData, setBoardData] = useState(shuffledData);
+
   const updatePatterns = (matchedIndex) => {
     const copyOfPatterns = [...partternsData];
     const matchedPattern = copyOfPatterns.splice(matchedIndex, 1)[0];
