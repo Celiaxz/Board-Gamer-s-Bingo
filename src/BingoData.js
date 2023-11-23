@@ -179,7 +179,7 @@ export const freeMiddleCell = {
   isClicked: true,
   isMatched: false,
 };
-
+//Defines the patterns that can match in the Bingo game
 export const matchedPartternsData = [
   [0, 1, 2, 3, 4], //rows
   [5, 6, 7, 8, 9],

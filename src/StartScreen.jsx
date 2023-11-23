@@ -5,15 +5,16 @@ import "./StartScreen.css";
 import gameAudio from "./assets/sound.mp3";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
-
+// Start screen component
 const Startscreen = () => {
+  //state to manage game start
   const [isGameStarted, setIsGameStarted] = useState(false);
-
+  //function to handle game start
   const onStartClick = () => {
     setIsGameStarted(true);
     document.getElementById("gameAudio").play();
   };
-
+  //Render start screen and game components based on game start state
   return (
     <div className="startScreen">
       {!isGameStarted && (
@@ -35,6 +36,7 @@ const Startscreen = () => {
         </>
       )}
       {isGameStarted && <Bingo />}
+      {/* Render Bingo component if game is started */}
       <audio id="gameAudio" loop>
         <source src={gameAudio} type="audio/mp3" /> audio not supported by
         browser

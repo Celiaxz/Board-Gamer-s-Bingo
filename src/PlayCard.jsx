@@ -1,14 +1,17 @@
 import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import "./PlayCard.css";
-
+//card component displaying a quote and a button to proceed to the next card
 export function Card(props) {
+  //state to manage a unique identifier for motion animations
   // use to tell framer-motion to animate the component when the component re-renders
   const [id, setID] = useState(crypto.randomUUID());
-  const card = props.card;
-  const playNextCard = props.playNextCard;
+  //props destructing
+  const card = props.card; //Object containing quote information for current card(all the way from bingodata.js)
+  const playNextCard = props.playNextCard; // funtion(Bingo) to proceed to the next card
 
   return (
+    //manages animations when components enter or leave
     <AnimatePresence>
       <motion.div
         initial={{ opacity: 0, x: -50 }}
@@ -31,7 +34,9 @@ export function Card(props) {
           <label
             className="nextButton"
             onClick={() => {
+              //calls the PlayNxtCard Function to get the next random card
               playNextCard();
+              //Generates a new randon ID for animation purposes, if not no animation
               setID(crypto.randomUUID());
             }}
           >

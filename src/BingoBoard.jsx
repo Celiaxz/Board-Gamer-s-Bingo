@@ -4,16 +4,17 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Cell } from "./Cell";
 import "./BingoBoard.css";
 import bingoWin from "./assets/bingo-removebg.png";
+//Bingoboard component managing the display of the game board
 
 export function BingoBoard(props) {
-  const card = props.card;
-  const data = props.data;
-  const updateData = props.updateData;
-  const partterns = props.partterns;
+  const card = props.card; //current card data
+  const data = props.data; //Array containing cells data
+  const updateData = props.updateData; // Function to update cell data
+  const partterns = props.partterns; // Function to remove matched pattern
   const removeMatchedPattern = props.removeMatchedPattern;
 
-  const [isNewMatch, setisNewMatch] = useState(false);
-
+  const [isNewMatch, setisNewMatch] = useState(false); // State to track if a new pattern was matched
+  // Function to check if a pattern is matched
   const matchedAPattern = useCallback(() => {
     return partterns.some((pattern) => {
       let numberOfClickedCells = 0;
@@ -33,16 +34,17 @@ export function BingoBoard(props) {
       }
     });
   }, [partterns, data, removeMatchedPattern]);
-
+  // Function to check if all cells have been clicked
   const allCellsHaveBeenClicked = useCallback(() => {
     return data.every((cell) => {
       return cell.isClicked;
     });
   }, [data]);
 
+  // Effects run when data, matchedAPattern, or allCellsHaveBeenClicked changes
   useEffect(() => {
     if (matchedAPattern()) {
-      setisNewMatch(true);
+      setisNewMatch(true); // Update state when a pattern is matched
       console.log("You matched a pattern!!");
     }
     if (allCellsHaveBeenClicked()) {
